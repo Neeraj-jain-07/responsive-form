@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Create form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .input {
+            padding: 5px 11px;
+            width: 424px;
+            margin-bottom: 27px;
+        }
+
+
+        .input:focus {
+            outline: none;
+            border-color: blue;
+            /* border-radius: 5px; */
+        }
+
+        .input-box i {
+            border: 1px solid black;
+            padding: 6px;
+            width: 30px;
+            text-align: center;
+            /* border-radius: 3.3px; */
+            background-color: #e9e6e1;
+        }
+
+        .first_name {
+            margin-right: 22px;
+        }
+
+        .name {
+            width: 184px;
+        }
+
+        .container {
+            width: 60vw;
+            margin: 45px auto;
+            box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .container .title {
+            text-align: center;
+            padding: 20px 0px;
+        }
+
+        .sub-container {
+            width: 75%;
+            margin: 0px auto;
+        }
+
+        .male-space {
+            margin-right: 90px;
+        }
+
+        .mar-gender {
+            margin-bottom: 16px;
+        }
+
+        .select-style {
+            width: 300px;
+            height: 29px;
+            margin-bottom: 20px;
+        }
+
+        .sub_box {
+            margin-top: 18px;
+        }
+
+        .sub_box .sub_btn {
+            padding: 3px 0px;
+            font-size: 15px;
+            background: hsl(223, 94%, 35%);
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-weight: 400;
+            margin-bottom: 8vh;
+            width: 450px;
+        }
+
+        .sub_box .sub_btn:hover {
+            background: #18a9e3;
+        }
+
+        /* Use mediaquery */
+        @media (max-width:1075px) {
+            .first_name {
+                margin-right: 22px;
+            }
+        }
+
+        @media (max-width:1009px) {
+            .name {
+                width: 163px;
+            }
+
+            .input {
+                width: 90%;
+            }
+
+            .first_name {
+                margin-right: 0px;
+            }
+
+            .select-style {
+                width: 95%;
+            }
+
+            .sub_box .sub_btn {
+                width: 96%;
+            }
+
+        }
+
+        @media (max-width:667px) {
+            .input-box i {
+                padding: 6px 0px;
+                width: 9%;
+            }
+        }
+
+        @media (max-width:500px) {
+            .container .title {
+                font-size: 26px;
+            }
+
+            .male-space {
+                margin-right: 47px;
+            }
+        }
+
+        @media (max-width:1500px) {
+            .sub-container {
+                width: 75%;
+                margin: 0px auto;
+            }
+        }
+
+        @media only screen and (min-width:1550px) and (max-width:2050px) {
+            body {
+                background-color: red;
+            }
+
+            .sub-container {
+                width: 49%;
+            }
+        }
+
+        @media (min-width:1660px) and (max-width:2000px) {
+            .first_name {
+                margin-right: 22px;
+            }
+            .name{
+                width:180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Registration Form</h1>
+        <div class="sub-container">
+            <form action="">
+                <div class="input-box">
+                    <i class="fa-regular fa-user"></i><input type="text" name="first name" placeholder="First Name"
+                        class="input first_name name">
+                    <i class="fa-regular fa-user"></i><input type="text" name="Last name" placeholder="Last Name"
+                        class="input name">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i><input type="email" placeholder="Email" class="input">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i><input type="password" placeholder="Password" class="input">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i><input type="password" placeholder="Conform Password" class="input">
+                </div>
+
+                <div class="input-box mar-gender">
+                    <input type="radio" id="male-sex" name="sex">
+                    <label for="male-sex" class="male-space">Male</label>
+
+                    <input type="radio" id="female-sex" name="sex">
+                    <label for="female-sex">Female</label>
+                </div>
+
+                <div class="input-box">
+                    <select class="select-style">
+                        <option>Select your country</option>
+                        <option>Afganistan</option>
+                        <option>Africa</option>
+                        <option>America</option>
+                        <option>Austria</option>
+                        <option>Australia</option>
+                        <option>Bangladesh</option>
+                        <option>Brazil</option>
+                        <option>Bhutan</option>
+                        <option>Canada</option>
+                        <option>China</option>
+                        <option>India</option>
+                        <option>Japan</option>
+                        <option>Russia</option>
+                        <option>Germany</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <input type="checkbox" id="term_condition">
+                    <label for="term_condition">I accept all term and condition</label>
+                </div>
+
+                <div class="input-box sub_box">
+                    <input type="submit" value="submit" class="sub_btn">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
